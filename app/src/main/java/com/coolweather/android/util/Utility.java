@@ -8,7 +8,7 @@ import com.alibaba.fastjson.JSON;
 import com.coolweather.android.db.City;
 import com.coolweather.android.db.County;
 import com.coolweather.android.db.Province;
-import com.coolweather.android.gson.Forecast;
+import com.coolweather.android.gson.Daily_Forecast;
 import com.coolweather.android.gson.Weather;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -133,7 +133,7 @@ public class Utility
             }
             return null;
         }
-    public static List<Forecast> handleWeatherResponse2(String response)
+    public static List<Daily_Forecast> handleWeatherResponse2(String response)
     {
 
         try {
@@ -144,7 +144,7 @@ public class Utility
             Log.v("123",weatherContent);
             //return new Gson().fromJson(weatherContent,Weather.class);
             Gson gson = new Gson();
-            return gson.fromJson(weatherContent,new TypeToken<List<Forecast>>(){}.getType());
+            return gson.fromJson(weatherContent,new TypeToken<List<Daily_Forecast>>(){}.getType());
            // return new Gson().fromJson(weatherContent,new Ty);
 //                Gson gson = new Gson();
 //                Weather weather = gson.fromJson(weatherContent, Weather.class);

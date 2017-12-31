@@ -11,7 +11,7 @@ public class Weather
 {
     public Aqi aqi;
     public Basic basic;
-    //public ArrayList<Forecast> forecastList;
+    //public ArrayList<Daily_Forecast> forecastList;
     public Now now;
     public String status;
     public Suggestion suggestion;
